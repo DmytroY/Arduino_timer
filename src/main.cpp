@@ -5,6 +5,10 @@
 #include "LargeLCD.h"
 
 //#define LED_PIN 13
+#define RELAY_PIN 5
+#define BUT1_PIN A0
+#define BUT2_PIN A1
+#define BUT3_PIN A2
 
 //LiquidCrystal lcd(12, 11, 10, 9, 8, 7);
 LargeLCD largeLcd(12, 11, 10, 9, 8, 7);
@@ -27,6 +31,12 @@ void setup() {
   if (rtc.lostPower()) {
     rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
   }
+
+  pinMode(BUT1_PIN, INPUT_PULLUP);
+  pinMode(BUT2_PIN, INPUT_PULLUP);
+  pinMode(BUT3_PIN, INPUT_PULLUP);
+  digitalWrite(RELAY_PIN, LOW);
+  pinMode(RELAY_PIN, OUTPUT);
   
   largeLcd.clear();
 }
@@ -52,10 +62,12 @@ void loop() {
     if (lastSecond % 2 == 0) {
       // Draw colon at col 6
       largeLcd.separator2(7);
+      digitalWrite(RELAY_PIN, HIGH);
     } else {
       // Erase colon by printing 3 blank spaces over it on both rows
       largeLcd.printString("  ", 0, 7);
       largeLcd.printString("  ", 1, 7);
+      digitalWrite(RELAY_PIN, LOW);
     }
   }
 
