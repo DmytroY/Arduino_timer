@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Dmitry Yakovenko",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": 43.2, "left": 47.5, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -207.77, "left": -41.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "nano:GND.2", "lcd1:VSS", "black", [ "v-38.4", "h-105.6" ] ],
+    [ "nano:5V", "lcd1:VDD", "red", [ "v9.6", "h57.6", "v-115.2", "h-153.7" ] ],
+    [ "lcd1:RS", "nano:12", "green", [ "h0.3", "v67.2", "h48" ] ],
+    [ "lcd1:RW", "lcd1:VSS", "black", [ "v-9.6", "h-38.5" ] ],
+    [ "lcd1:E", "nano:11", "green", [ "v57.6", "h38.4" ] ],
+    [ "lcd1:D4", "nano:10", "green", [ "v0" ] ],
+    [ "lcd1:D5", "nano:9", "green", [ "v0" ] ],
+    [ "lcd1:D6", "nano:8", "green", [ "v0" ] ],
+    [ "lcd1:D7", "nano:7", "green", [ "v0" ] ],
+    [ "lcd1:K", "lcd1:RW", "black", [ "v-9.6", "h-105.5" ] ],
+    [ "lcd1:A", "nano:13", "green", [ "v28.8", "h134.3", "v182.4", "h-192" ] ]
+  ],
+  "dependencies": {}
+}
