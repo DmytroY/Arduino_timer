@@ -1,3 +1,9 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+SPDX-License-Identifier: MIT
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
 # Arduino Timer with RTC, 16x2 "Large" Display and Relay
 
 A simple, self-contained Arduino-based weekly timer that uses a DS3231 RTC, a 16x2 LCD with custom large digits, and a relay to switch external loads on/off on scheduled days and times. The project includes a custom LargeLCD helper to draw big digits on a standard 16x2 LCD, button-driven menu for time and schedule configuration, and EEPROM-backed schedule storage.
@@ -125,7 +131,7 @@ Contributing
 - If you open issues or PRs, include hardware used and steps to reproduce.
 
 License
-- No license file included in the repository. If you want others to use or contribute, consider adding an open-source license (e.g., MIT).
+- This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 Acknowledgements
 - Uses Adafruit RTClib for DS3231 support.
