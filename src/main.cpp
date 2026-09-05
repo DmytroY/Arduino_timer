@@ -266,7 +266,7 @@ void menu() {
   while((millis() - startTime) < 10000){
 
     char daysStr[8]; //buffer for display day of week schedule
-    if(((millis() - startTime)/1000)%2){
+    if(((millis() - startTime) / 1000) % 2 == 0){
       // display relay ON time
       // convert day of week schedule byte to string for display
       for (uint8_t day = 1; day < 8; day++){
